@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>宋子浩的个人主页</title>
+  <style>
+    body{background:url(./ly.jpg)no-repeat;}
+    /* ===== 基础 ===== */
+    * { box-sizing: border-box; }
+
+    html {
+      /* 锚点跳转时目标不被导航栏盖住 */
+      scroll-padding-top: 64px;
+    }
+
+    body {
+      margin: 0;
+      padding-top: 64px;        /* 给固定导航栏留出高度 */
+      font-family: "Microsoft YaHei", sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #24364b;
+      background: #eef3f9;
+	  
+    }
+
+    /* ===== 固定导航栏 ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      background: #ffffff;
+      border-bottom: 1px solid #dde6ef;
+    }
+
+    .nav a {
+      color: #075d9c;
+      text-decoration: none;
+      padding: 4px 2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav a:hover {
+      border-bottom-color: #075d9c;
+    }
+
+    /* ===== 内容卡片 ===== */
+    main {background:url(./ly.jpg)no-repeat;
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 36px;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(36, 54, 75, .06);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      color: #075d9c;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+      color: #123c60;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+    }
+
+    /* 只有直接放在 main 下的 h2 才需要上间距 */
+    main > h2 { margin-top: 32px; }
+
+    p { margin: 0 0 12px; }
+
+    a { color: #0867a6; }
+
+    /* ===== 个人简介 ===== */
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      margin-top: 26px;
+      padding: 26px;
+      background: #f4f8fc;
+      border-radius: 12px;
+    }
+
+    .avatar {
+      flex-shrink: 0;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #cfe6fb, #a4d0f2);
+      color: #075d9c;
+      font-size: 42px;
+      line-height: 96px;
+      text-align: center;
+    }
+
+    /* ===== 作品列表 ===== */
+    .works {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .work {
+      flex: 1 1 240px;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      background: #fbfcfe;
+      border: 1px solid #dde6ef;
+      border-radius: 12px;
+    }
+
+    .work a {
+      margin-top: auto;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* ===== 分隔区块 ===== */
+    .details,
+    .contact {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #e4ecf4;
+    }
+
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      color: #7b8ea3;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+	
+
+  <nav class="nav">
+    <a href="#home">首页</a>
+    <a href="#about">关于我</a>
+    <a href="#works">我的作品</a>
+    <a href="#contact">联系我</a>
+  </nav>
+
+  <main>
+	 
+    <header id="home">
+      <h1>宋子浩的个人主页</h1>
+    </header>
+
+    <section class="profile" id="about">
+      <div class="avatar">宋</div>
+      <div>
+        <h2>你好，我是宋子浩</h2>
+        <p>大数据专业学生，正在学习 Web 程序设计。</p>
+        <p>喜欢游戏、音乐，篮球和羽毛球。</p>
+      </div>
+    </section>
+
+    <h2 id="works">我的作品</h2>
+    <section class="works">
+      <article class="work">
+        <h3>个人主页</h3>
+        <p>记录我的兴趣与学习经历。</p>
+        <a href="#project-1">查看作品</a>
+      </article>
+      <article class="work">
+        <h3>游戏经历</h3>
+        <p>记录我在游戏中的精彩瞬间。</p>
+        <a href="#project-2">查看作品</a>
+      </article>
+      <article class="work">
+        <h3>运动记录</h3>
+        <p>记录我的运动经历和心得体会。</p>
+        <a href="#project-3">查看作品</a>
+      </article>
+    </section>
+
+    <section class="details">
+      <h2>作品详情</h2>
+      <h3 id="project-1">个人主页</h3>
+      <p>用 HTML 组织个人信息，用 CSS 设置颜色、留白和布局。</p>
+      <h3 id="project-2">游戏经历</h3>
+      <p>主玩手游，偶尔打打端游，包括但不限于原农铁洲。</p>
+      <h3 id="project-3">运动记录</h3>
+      <p>参加了上外的3v3新生篮球赛。</p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>联系我</h2>
+      <p>欢迎交流网页设计和游戏。</p>
+      <p>邮箱：<a href="mailto:13205690048@163.com">13205690048@163.com</a></p>
+    </section>
+
+    <footer>宋子浩的个人主页</footer>
+  </main>
+
+</body>
+</html>
